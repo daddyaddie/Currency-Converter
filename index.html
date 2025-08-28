@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for the swap icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Stylesheet-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="app-details">
+        <img src="the.jpeg" class="app-icon" />
+        <h1 class="app-title">Currency Converter</h1>
+      </div>
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" value="100" />
+
+      <div class="currency-container">
+        <div class="select-container">
+          <!-- Flag will be inserted here by JavaScript -->
+          <select id="from-currency-select"></select>
+        </div>
+        <!-- Swap button -->
+        <button id="swap-button" type="button">
+          <i class="fa-solid fa-arrow-right-arrow-left"></i>
+        </button>
+        <div class="select-container">
+          <!-- Flag will be inserted here by JavaScript -->
+          <select id="to-currency-select"></select>
+        </div>
+      </div>
+      <button id="convert-button">Convert</button>
+      <div id="result"></div>
+    </div>
+
+    <!-- Script With Array Of Supported Country Codes -->
+    <script src="currency-codes.js"></script>
+    <!-- Script with country to flag mapping and conversion logic -->
+    <script src="script.js"></script>
+  </body>
+</html>
